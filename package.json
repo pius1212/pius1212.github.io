@@ -1,0 +1,14 @@
+{
+  "name": "charting",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
