@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pius Lee | Projects</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Pius Lee - Get in touch at wombattywombat[at]gmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- actual html -->
+        <nav id="navbar" class="navbar">
+            <header>
+                pius lee | projects
+                <a href="/index.html">About</a>
+                <a href="#contact">Contact</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/trades.html">Trades</a>
+            </header>
+        </nav>
+
+        <!-- JS -->
+        <script>
+            const nav = document.querySelector('#navbar');
+            const navTop = nav.offsetTop;
+
+            function stickyNavigation() {
+                console.log('navTop = ' + navTop);
+                console.log('scrollY = ' + window.scrollY);
+
+                if (window.scrollY >= navTop) {
+                    // nav offsetHeight = height of nav
+                    document.body.style.paddingTop = nav.offsetHeight + 'px';
+                    document.body.classList.add('fixed-nav');
+                } else {
+                    document.body.style.paddingTop = 0;
+                    document.body.classList.remove('fixed-nav');
+                }
+            }
+            window.addEventListener('scroll', stickyNavigation);
+            
+        </script>
+        <footer></footer>
+    </body>
+</html>
