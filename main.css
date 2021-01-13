@@ -2,15 +2,17 @@
 
 /* header */
 header {
-    color: black;
+    color: #1D1D11;
 
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     font-size: 55px;
 
-    margin-top: 0.9%;
     margin-bottom: 1.5%;
-    text-align: center;
+    margin-left: 1%;
+    margin-right: 3%;
+
+    padding: 1%;
 
     user-select: none;
     -webkit-user-select: none;
@@ -22,9 +24,38 @@ header::selection {
     background: transparent;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    float: right;
+    color: #1D1D11;
+    text-align: center;
+    padding-left: 3%;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #1D1D11;
+    color: #F2F2FD;
+}
+
+
 /* default html tags */
 div {
-    color: black;
+    color: #1D1D11;
 
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
@@ -33,3 +64,10 @@ div {
 h2 {
     font-size: 25px;
 }
+
+body {
+    margin: 0;
+}
+
+/* custom css */
+
