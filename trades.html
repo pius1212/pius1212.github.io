@@ -19,25 +19,39 @@
             </header>
         </nav>
 
+        <h1 class="tradestitle">Options</h1>
         <!-- trades list -->
-        <button type="button" class="collapsible">AAPL 130/135C BULL CALL SPREAD</button>
-        <div class="collapsiblecontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <button type="button" class="collapsible">AAPL 130/135C BULL CALL SPREAD</button>
-        <div class="collapsiblecontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
+        <table>
+            <tr>
+              <th>Ticker</th>
+              <th>Strike</th>
+              <th>Call/Put</th>
+              <th>Type</th>
+              <th>Price</th>
+              <th>Size</th>
+              <th>Open/Closed</th>
+              <th>Un/Realized Profit</th>
+              <th>Date</th>
+            </tr>
+            <tr>
+                <td>AAPL</td>
+                <td>130/135</td>
+                <td>Call</td>
+                <td>BCS</td>
+                <td>$1.27</td>
+                <td>4</td>
+                <td>Closed</td>
+                <td>$60</td>
+                <td>1-13-2020</td>
+            </tr>
+          </table>
+          
         <!-- JS -->
         <script>
             const nav = document.querySelector('#navbar');
             const navTop = nav.offsetTop;
 
             function stickyNavigation() {
-                console.log('navTop = ' + navTop);
-                console.log('scrollY = ' + window.scrollY);
-
                 if (window.scrollY >= navTop) {
                     // nav offsetHeight = height of nav
                     document.body.style.paddingTop = nav.offsetHeight + 'px';
@@ -47,22 +61,7 @@
                     document.body.classList.remove('fixed-nav');
                 }
             }
-            window.addEventListener('scroll', stickyNavigation);
-            
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                     content.style.display = "block";
-                }
-            });
-            }
+            window.addEventListener('scroll', stickyNavigation);          
         </script>
         <footer></footer>
     </body>
