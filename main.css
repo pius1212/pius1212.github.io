@@ -53,6 +53,16 @@ header::selection {
     color: #F2F2FD;
 }
 
+.name, .sectionname {
+    float: left;
+}
+
+.sectionname {
+    background-color: #1D1D11;
+    color: #F2F2FD;
+    padding-left: 0.15%;
+    padding-right: 0.15%;
+}
 
 /* default html tags */
 div {
